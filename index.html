@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+</head>
+<style>
+    .box h1{
+        padding-top: 100px;
+    }
+    .box{
+        height: 100vh;
+        background-color: aquamarine;
+    }
+    h1,h3{
+        text-align: center;
+    }
+    @media (min-width:1024px) and (max-width:1440px) {
+        .screen-1024-1440{
+            background-color: forestgreen;
+            display: block;
+        }
+        .screen-425-768{
+            display: none;
+        }
+        .screen-768-1024{
+            display: none;
+        }
+        .screen-425{
+            display:none;
+        }        
+    }
+    @media (min-width:768px) and (max-width:1024px){
+        .screen-768-1024{
+            background-color: darkgoldenrod;
+            display: block;
+        }
+        .screen-425-768{
+            display: none;
+        }
+        .screen-1024-1440{
+            display: none;
+        }
+        .screen-425{
+            display:none;
+        }        
+    }
+    @media(min-width:425px)and (max-width:768px){
+        .screen-425-768{
+            background-color: aqua;
+            display: block;
+        }
+        .screen-1024-1440{
+            display: none;
+        }
+        .screen-768-1024{
+            display: none;
+        }
+        .screen-425{
+            display:none;
+        }
+    }
+    @media(max-width:425px){
+        .screen-425{
+            background-color: crimson;
+            display: block;
+        }
+        .screen-425-768{
+            display: none;
+        }
+        .screen-1024-1440{
+            display: none;
+        }
+        .screen-768-1024{
+            display: none;
+        } 
+    }
+</style>
+<body>
+      <header>
+        <div class="box screen-1024-1440"> <h1> This is Media Query demo.<br><h3>Screen Size: 1440px</h3></h1></div>
+        <div class="box screen-768-1024"><h1> This is Media Query demo.<br><h3>Screen Size: 1024px</h3></h1></div>
+        <div class="box screen-425-768"><h1> This is Media Query demo.<br><h3>Screen Size: 768px</h3></h1></div>  
+        <div class="box screen-425"><h1> This is Media Query demo.<br><h3>Screen Size: 425px</h3></h1></div>  
+     </header>    
+</body>
+</html>
